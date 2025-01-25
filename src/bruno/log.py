@@ -2,7 +2,23 @@ import logging
 import os
 import datetime
 
-def set_logger():
+def set_logger() -> logging.Logger:
+    """
+    Descripcion
+    -------
+    Funcion que instacia un logger y lo configura para la
+    salida de logs en consola y en archivo (si no existe la
+    ruta para almacenar los logs, lo crea).
+
+    Parametros
+    -------
+    None
+
+    Salidas
+    -------
+    Logger instaciado
+    """
+
     # Crear un logger
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)  # Establecer el nivel de log para el logger
